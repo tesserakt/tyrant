@@ -11,7 +11,7 @@ module Tyrant
   class SignUp < Trailblazer::Operation
     class Confirmed < Trailblazer::Operation
       include Model
-      model User, :create
+      model ::Spree::User, :create
 
       contract do
         include Reform::Form::ActiveModel::Validations
