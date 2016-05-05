@@ -10,7 +10,7 @@ module Tyrant
         end
 
         Warden::Manager.serialize_from_session do |id|
-          User.find_by(id: id) # Session.sign_in!(user) or something!
+          ::Spree::User.find_by(id: id) # Session.sign_in!(user) or something!
         end
       end
   end
